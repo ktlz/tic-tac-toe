@@ -1,0 +1,26 @@
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #546d96;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start__btn {
+  width: 200px;
+  height: 35px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  outline: none;
+  background-color: #546d96;
+  border: 1px solid white;
+  color: #fff;
+}
+
+.start__btn:hover {
+  color: #546d96;
+  background-color: #fff;
+  transition: .3s all ease;
+}
