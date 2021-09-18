@@ -1,4 +1,4 @@
-export function calculateWinner(squares) {
+export function calculateGameResult(squares) {
 	const lines = [
 		[0, 1, 2],
 		[3, 4, 5],
@@ -15,5 +15,9 @@ export function calculateWinner(squares) {
 			return squares[a]
 		}
 	}
+  debugger
+  if (!squares.includes(null)) {
+    return '-'
+  }
 	return null
 }
