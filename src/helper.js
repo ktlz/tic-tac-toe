@@ -11,11 +11,12 @@ export function calculateGameResult(squares) {
 	]
 	for (let i = 0; i < lines.length; i++) {
 		const [a, b, c] = lines[i]
+    const line = [a, b, c]
 		if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-			return squares[a]
+      const result = [squares[a], line]
+			return result
 		}
 	}
-  debugger
   if (!squares.includes(null)) {
     return '-'
   }
