@@ -50,7 +50,10 @@ export default function Game() {
 
 
   const startNewGame = () => {
-
+    if(gameResult && gameResult[0] && gameResult[0] === '-'){
+      alert('IT IS A DRAW');
+      setBoard(Array(9).fill(null))
+    }
     return (
       <button className="start__btn" onClick={() => {
         setBoard(Array(9).fill(null))
@@ -88,7 +91,6 @@ export default function Game() {
         <div>Score</div>
         <div>{player1}: {xCount}</div>
         <div>{player2}: {oCount}</div>
-        <p>{gameResult && gameResult[0] && gameResult[0] === '-' ? 'IT IS A DRAW' : ''}</p>
         <p>{gameResult && gameResult[0] && gameResult[0] !== "-" ? gameResult[0] + ' is a winner' : xIsNext ? 'X is next' : 'O is next'}</p>
         {startNewGame()}
       </div>
